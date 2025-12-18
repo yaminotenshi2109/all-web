@@ -1,0 +1,27 @@
+body {
+    background-color: #e8e8e8; /* [cite: 128] */
+}
+.container-fluid {
+    margin-top: 30px; /* [cite: 130] */
+}
+.house {
+    background-color: #fff; /* [cite: 135] */
+    padding: 20px; /* [cite: 136] */
+    float: left; /* [cite: 137] */
+    margin-bottom: 20px; /* [cite: 138] */
+}
+.house .media-body, .list-inline {
+    margin-top: 10px; /* [cite: 141, 145] */
+}
+
+/* Responsive adjustments [cite: 146, 151] */
+@media screen and (min-width: 990px) {
+    .house img {
+        max-width: 180px; /* [cite: 148] */
+    }
+}
+@media screen and (max-width: 990px) {
+    .house p, .house .media-body a {
+        display: none; /* [cite: 154, 156] */
+    }
+}
