@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NguyenTheHung - Web/Game/Security/Blockchain.... Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h1>Nguyen The Hung </h1>
+            <h2>Web Developer</h2>
+            <p>A passionate web developer with experience in HTML, CSS, and JavaScript....</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>Bachelor of Management Information System</h3>
+                <p class="subtitle"> International School - Vietnam National University | 2022 - 2026</p>
+            </div>
+
+            <div class="education-item">
+                <h3>High School Diploma</h3>
+                <p class="subtitle">Kien An High School - Hai Phong City | 2019 - 2022</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Junior Web Developer</h3>
+                <p class="subtitle">Tech Solutions Inc. | 2020 - Present</p>
+                <ul>
+                    <li>Developed and maintained company websites</li>
+                    <li>Collaborated with design team to implement user interfaces</li>
+                    <li>Optimized websites for maximum speed and scalability</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Web Development Intern</h3>
+                <p class="subtitle">Digital Creations | Summer 2019</p>
+                <ul>
+                    <li>Assisted in website development projects</li>
+                    <li>Created responsive designs for mobile platforms</li>
+                    <li>Participated in client meetings and presentations</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+
+            <div class="contact-grid">
+                <!-- Contact form -->
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <label for="name">Full name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" placeholder="Subject" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Send message</button>
+                        <div class="form-status" id="formStatus" aria-live="polite"></div>
+                    </div>
+                </form>
+
+                <!-- Contact details -->
+                <aside class="contact-details">
+                    <p class="details-intro">Prefer to reach me directly? Use any of the options below.</p>
+
+                    <div class="detail-item">
+                        <strong>Email</strong>
+                        <a href="mailto:hungwork2109@email.com">hungwork2109@email.com</a>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>Phone</strong>
+                        <a href="tel:+84846210904">0846210904</a>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>LinkedIn</strong>
+                        <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener">Hung Nguyen</a>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>GitHub</strong>
+                        <a href="https://github.com/yaminotenshi2109" target="_blank" rel="noopener">yaminotenshi2109</a>
+                    </div>
+
+                    <div class="detail-item meta">
+                        <strong>Location</strong>
+                        <span>Hanoi City, Viet Nam</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hung nguyen. All rights reserved.</p>
+        <p>Created using basic HTML and CSS.</p>
+    </footer>
+    
+    <script>
+        // Simple client-side handler to show a success message without sending data.
+        (function () {
+            const form = document.getElementById('contactForm');
+            const status = document.getElementById('formStatus');
+
+            if (!form) return;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Basic validation check
+                if (!form.checkValidity()) {
+                    status.textContent = 'Please fill out required fields.';
+                    status.style.color = '#e74c3c';
+                    return;
+                }
+
+                // Simulate send
+                status.style.color = '#2ecc71';
+                status.textContent = 'Message sent — thank you!';
+
+                // Reset after short delay
+                setTimeout(() => {
+                    form.reset();
+                    status.textContent = '';
+                }, 2500);
+            });
+        })();
+    </script>
+</body>
+</html>

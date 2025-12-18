@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="form-wrapper">
+        <div class="header">REGISTER NEW ACCOUNT</div>
+        <form id="registrationForm">
+            <label>Username</label>
+            <input type="text" id="username" required>
+
+            <label>Password</label>
+            <input type="password" id="password" required>
+
+            <label>Confirm password</label>
+            <input type="password" id="confirm" required>
+            
+            <label>Gender</label>
+            <div class="inline">
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+            </div>
+
+            <label>Phone</label>
+            <input type="text" id="phone">
+
+            <label>Email</label>
+            <input type="text" id="email">
+            
+            <label>Favourite</label>
+            <div class="inline">
+                <input type="checkbox" checked> Music
+                <input type="checkbox" checked> Reading
+            </div>
+
+            <label>Picture</label>
+            <input type="file">
+
+            <label>Description</label>
+            <textarea rows="4"></textarea>
+
+            <label>Education level</label>
+            <select>
+                <option>Aptech</option>
+                <option>University</option>
+            </select>
+
+            <label>Language</label>
+            <select multiple class="lang-list">
+                <option selected>Vietnamese</option>
+                <option>English</option>
+                <option>French</option>
+                <option>Japanese</option>
+            </select>
+
+            <div class="footer-btns">
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script src='script.js'></script>
+
+</body>
+</html>
